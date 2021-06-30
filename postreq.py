@@ -1,10 +1,7 @@
 import requests
+from keys, import keys
 from tweepy import API, OAuthHandler
-apikey = "lHYJaCpgMMKLNDlWaDcNjMeMa"
-apisecret = "NlQC2riUCfC9F0r4IqQPrVYbWP9e4kcBN5hEovcTInVIFAqWBQ"
-token = "894961955957551105-uPz08lGX57JC3woITvQ2NxvGa9HHQpA"
-tokensecret = "OOD2k5mfLKukLIHrSXCOL5ZgFqPWdOeVhfuDzlUXieTKE"
-bearer = "AAAAAAAAAAAAAAAAAAAAAHKoHwEAAAAAKNC4f0%2BhSW5xyv3iR%2BrTMFo8XpY%3DH5KRuSK86u9o1UtlxoVvW8ShIkMA1Bf4tacWn3AosFLJJZl8q6"
+
 
 
 auth = OAuthHandler(apikey, apisecret)
