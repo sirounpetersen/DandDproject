@@ -1,5 +1,8 @@
 import requests
 import json
+import sqlalchemy
+
+
 
 spellsurl = "https://www.dnd5eapi.co/api/spells"
 r = requests.get(spellsurl)
