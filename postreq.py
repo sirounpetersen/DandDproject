@@ -1,5 +1,10 @@
 import requests
 import json
+import sqlalchemy
+from sqlalchemy import create_engine
+import pandas as pd
+
+
 
 spellsurl = "https://www.dnd5eapi.co/api/spells"
 r = requests.get(spellsurl)
@@ -13,8 +18,11 @@ mazeurl = spellsurl +"/" + a
 q = requests.get(mazeurl)
 mazedict = q.json()
 
+pd.DataFrame.from_dict(mazedict)
 
 
+engine = create_engine('mysql://root:codio@localhost/dandd')
+pd.DataFrame.to_sql('Maze spell', con=engine, if_exists='replace', index=False)
 
 
 """{'index': 'maze', 
