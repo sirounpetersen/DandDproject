@@ -2,7 +2,7 @@ import requests
 import json
 import sqlalchemy
 from sqlalchemy import create_engine
-#import pandas as pd
+import pandas as pd
 
 
 
