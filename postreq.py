@@ -2,7 +2,7 @@ import requests
 import json
 import sqlalchemy
 from sqlalchemy import create_engine
-import pandas as pd
+#import pandas as pd
 
 
 
@@ -18,7 +18,16 @@ mazeurl = spellsurl +"/" + a
 q = requests.get(mazeurl)
 mazedict = q.json()
 
-pd.DataFrame.from_dict(mazedict)
+updated = {}
+
+keys = ['name', 'range', 'ritual', 'duration', 'concentration, casting_time', 'level']
+
+for key, val in mazedict.items():
+  if key in keys:
+    updated[key] = val
+
+
+pd.DataFrame.from_dict(updated)
 
 
 engine = create_engine('mysql://root:codio@localhost/dandd')
