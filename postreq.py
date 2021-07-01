@@ -11,6 +11,7 @@ r = requests.get(spellsurl)
 
 spellsdict = (r.json())
 
+
 #maze
 a = (spellsdict["results"][198]["index"])
 mazeurl = spellsurl +"/" + a 
